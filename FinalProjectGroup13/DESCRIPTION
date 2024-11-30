@@ -1,0 +1,13 @@
+Package: FinalProjectGroup13
+Type: Package
+Title: What the Package Does (Title Case)
+Version: 0.1.0
+Authors@R: c(  person("Joshua", "Fahlgren", email = "jff0008@auburn.edu", role = c("aut","cre")),
+    person("Braxton", "Stacey", role = "aut"),
+    person("Thomas", "Jackson", role = "aut"),
+    )
+Maintainer: Joshua Fahlgren <jff0008@auburn.edu>
+Description: This package implements supervised binary classification using numerical optimization.
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
