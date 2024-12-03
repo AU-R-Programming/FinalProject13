@@ -2,7 +2,7 @@
 % Please edit documentation in R/Initial_Values.r
 \name{estimate_beta}
 \alias{estimate_beta}
-\title{Estimate Logistic Regression Coefficients}
+\title{Estimate Beta Coefficients}
 \usage{
 estimate_beta(X, y)
 }
@@ -15,20 +15,16 @@ estimate_beta(X, y)
 A list containing:
   \item{coefficients}{The estimated beta coefficients}
   \item{fitted_values}{The predicted probabilities for the training data}
-  \item{convergence}{Convergence status from optimization (0 indicates successful convergence)}
   \item{starting_beta}{Initial beta values calculated using least squares}
   \item{optimization_info}{A list containing additional optimization details:
     \itemize{
       \item{value}{The value of the loss function at the optimum}
-      \item{hessian}{The Hessian matrix at the optimum (if calculated)}
       \item{counts}{Number of function and gradient evaluations}
     }
   }
 }
 \description{
-Estimates beta coefficients for logistic regression using maximum likelihood estimation.
-The function implements iterative optimization to find the best coefficients that minimize
-the negative log-likelihood.
+estimates the coefficient vector βwhich includes the independent variables/predictors plus the intercept
 }
 \examples{
 X <- matrix(rnorm(100 * 2), ncol = 2)
