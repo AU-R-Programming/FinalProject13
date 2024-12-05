@@ -11,3 +11,4 @@ Description: This package implements supervised binary classification using nume
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 7.3.2
