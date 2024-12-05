@@ -1,6 +1,9 @@
+#Load the package
+#library(devtools)
+#install_github("AU-R-Programming/FinalProject13")
 
 # Load the necessary functions from your package
-library(FinalProjectGroup13)
+library(FinalProject13)
 
 # Load dataset from extdata folder
 data_path <- system.file("extdata", "expenses.csv", package = "FinalProjectGroup13")

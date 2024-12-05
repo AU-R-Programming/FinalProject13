@@ -1,5 +1,5 @@
 ---
-title: "Getting Started with FinalProjectGroup13"
+title: "Getting Started with FinalProject13"
 output: rmarkdown::html_vignette
 author: "Braxton Stacey, Joshua Fahlgren, Thomas Jackson"
 vignette: >
@@ -16,14 +16,14 @@ knitr::opts_chunk$set(
 ```
 
 ```{r setup}
-library(FinalProjectGroup13)
+library(FinalProject13)
 ```
 
 ## Introduction
 
-Welcome to the **FinalProjectGroup13** package! This package implements supervised binary classification using numerical optimization techniques, with a particular focus on logistic regression. It is designed to help users efficiently estimate the coefficients of logistic regression models and generate confidence intervals using bootstrapping. Additionally, the package includes tools for model evaluation, including confusion matrix calculations and other diagnostic metrics.
+Welcome to the **FinalProject13** package! This package implements supervised binary classification using numerical optimization techniques, with a particular focus on logistic regression. It is designed to help users efficiently estimate the coefficients of logistic regression models and generate confidence intervals using bootstrapping. Additionally, the package includes tools for model evaluation, including confusion matrix calculations and other diagnostic metrics.
 
-Whether you are exploring relationships in your data or building robust predictive models, **FinalProjectGroup13** provides a set of functions for model fitting, evaluation, and interpretation, helping you easily integrate these tools into your analytical workflow.
+Whether you are exploring relationships in your data or building robust predictive models, **FinalProject13** provides a set of functions for model fitting, evaluation, and interpretation, helping you easily integrate these tools into your analytical workflow.
 
 In this vignette, we will guide you through the primary functionalities of the package, showing you how to:
 - Estimate logistic regression coefficients using numerical optimization
@@ -34,7 +34,7 @@ Let's get started!
 
 ## Data Preprocessing
 
-Before we begin using the functions in the **FinalProjectGroup13** package, let's first preprocess the data. For this example, we will be using a dataset called **expenses.csv**, which contains various information, including smoking status, BMI, and the number of children for a set of individuals. Our goal is to process this data and prepare it for binary classification analysis.
+Before we begin using the functions in the **FinalProject13** package, let's first preprocess the data. For this example, we will be using a dataset called **expenses.csv**, which contains various information, including smoking status, BMI, and the number of children for a set of individuals. Our goal is to process this data and prepare it for binary classification analysis.
 
 ### Step 1: Loading the Data
 
@@ -64,7 +64,7 @@ summary(expenses)
 
 ## Applying Package Functions to the Data
 
-Now that we have preprocessed the data, let's begin applying the functions from the **FinalProjectGroup13** package to perform logistic regression analysis on the data. We will use the **smoker** and **bmi** columns for this analysis.
+Now that we have preprocessed the data, let's begin applying the functions from the **FinalProject13** package to perform logistic regression analysis on the data. We will use the **smoker** and **bmi** columns for this analysis.
 
 ### Step 1: Estimating Beta Coefficients Using Logistic Regression
 
@@ -208,14 +208,14 @@ Here’s how to apply the `bootstrap_ci()` function:
 
 
 # Select the columns we are interested in
-X <- expenses[, c("bmi", "children")]  # Predictors: BMI and Children
-y <- ifelse(expenses$smoker == "yes", 1, 0)  # Response: Smoking status (1 for yes, 0 for no)
+#X <- expenses[, c("bmi", "children")]  # Predictors: BMI and Children
+#y <- ifelse(expenses$smoker == "yes", 1, 0)  # Response: Smoking status (1 for yes, 0 for no)
 
 # Perform bootstrap to calculate confidence intervals for the beta coefficients
-bootstrap_result <- bootstrap_ci(X, y, num_bootstraps = 100, alpha = 0.05)
+#bootstrap_result <- bootstrap_ci(X, y, num_bootstraps = 100, alpha = 0.05)
 
 # Display the confidence intervals
-bootstrap_result
+#bootstrap_result
 
 ```
 
