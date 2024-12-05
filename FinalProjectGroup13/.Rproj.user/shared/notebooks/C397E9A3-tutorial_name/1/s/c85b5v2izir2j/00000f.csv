@@ -1,9 +1,0 @@
-"0","# Create the predictor matrix (children column) and response vector (smoker column)"
-"0","X <- expenses$children"
-"0","y <- expenses$smoker"
-"0",""
-"0","# Apply the estimate_beta function to estimate the beta coefficients"
-"0","model <- estimate_beta(X, y)"
-"2","Warning: internal error 1 in R_decompress1 with libdeflate"
-"2","Error: lazy-load database 'C:/Users/Braxton Stacey/AppData/Local/R/win-library/4.4/FinalProjectGroup13/R/FinalProjectGroup13.rdb' is corrupt
-"
