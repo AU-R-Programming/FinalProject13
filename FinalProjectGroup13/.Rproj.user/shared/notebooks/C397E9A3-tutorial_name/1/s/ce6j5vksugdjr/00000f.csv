@@ -1,0 +1,3 @@
+"0","# Load the dataset from the 'inst/extdata' directory in the package"
+"0","expenses <- read.csv(system.file(""extdata"", ""expenses.csv"", package = ""FinalProjectGroup13""))"
+"0","head(expenses)"

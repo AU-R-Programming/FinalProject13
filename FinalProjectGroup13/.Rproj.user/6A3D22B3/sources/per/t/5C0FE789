@@ -1,0 +1,27 @@
+{
+    "id": "5C0FE789",
+    "path": "~/GitHub/FinalProject13/FinalProjectGroup13/vignettes/tutorial_name.Rmd",
+    "project_path": "vignettes/tutorial_name.Rmd",
+    "type": "r_markdown",
+    "hash": "2842482086",
+    "contents": "",
+    "dirty": false,
+    "created": 1733372860761.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "72,57",
+        "scrollLine": "71",
+        "last_setup_crc32": "f1be9456c52fb9aa"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1733374777,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1733374867340,
+    "read_only": false,
+    "read_only_alternatives": []
+}
