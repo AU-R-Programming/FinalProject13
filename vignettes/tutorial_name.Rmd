@@ -183,7 +183,7 @@ head(predictions)
 ```
 
 ### Explaining the Results:
-Our `predict_prob()` function yielded us with predicted probabilities for each individual in the dataset. Looking at the first few, we can see that the prediction function is working as expected. For example, the first individual is predicted to be very unlikely to have charges above the median as they have a predicted probability of 14%. This lines up with our coefficients, as, looking at our dataset, both the first individuals is young with a low bmi. In the other direction, we can look at the highest probability of having charges above the median in the group, which is the fifth individual. This lines up with our coefficients, as, looking at our dataset, the individual has the second highest age of our group of 6 and the third highest bmi.
+Our `predict_prob()` function yielded us with predicted probabilities for each individual in the dataset. Looking at the first few, we can see that the prediction function is working as expected. For example, the first individual is predicted to be very unlikely to have charges above the median as they have a predicted probability of 14%. This lines up with our coefficients, as, looking at our dataset, the first individual is young with a low bmi. In the other direction, we can look at the highest probability of having charges above the median in the group, which is the fifth individual. This lines up with our coefficients, as, looking at our dataset, the individual has the second highest age of our group of 6 and the third highest bmi.
 
 ### Step 4: Creating a Confusion Matrix and Generating Related Metrics
 
