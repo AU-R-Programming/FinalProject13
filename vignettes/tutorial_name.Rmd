@@ -50,12 +50,23 @@ head(expenses)
 
 # Step 2: Converting Categorical Data to Binary
 # Convert 'smoker' column to binary (1 for yes, 0 for no)
-expenses$smoker <- ifelse(expenses$smoker == "yes", 1, 0)
+# Set the median value for charges
+median_charges <- 9382
+
+# Create a new column indicating whether charges are greater than the median
+expenses$charges_above_median <- ifelse(expenses$charges > median_charges, 1, 0)
+
+
+# Create a new column for age in years older than 18
+expenses$years_older_than_min <- expenses$age - 18
+
+# Create a new column for age in years older than 18
+expenses$bmi_greater_than_min <- expenses$bmi - 15.96
 
 # Step 3: Inspecting the Data
 # Inspect the 'bmi' and 'children' columns for any issues
-summary(expenses$bmi)
-summary(expenses$children)
+summary(expenses$years_older_than_min)
+summary(expenses$bmi_greater_than_min)
 
 # Step 4: Data Summary
 # Summary of the processed data
@@ -71,14 +82,14 @@ Now that we have preprocessed the data, let's begin applying the functions from 
 The first step in logistic regression is to estimate the coefficients for the predictor variables. We will use the `estimate_beta()` function to perform this estimation. The function takes a matrix of predictor variables (in our case, the **bmi** column) and a binary response variable (the **smoker** column), and returns the estimated beta coefficients.
 ```{r}
 # Ensure that both 'bmi' and 'children' columns are numeric
-expenses$bmi <- as.numeric(expenses$bmi)
-expenses$children <- as.numeric(expenses$children)
+expenses$years_older_than_min <- as.numeric(expenses$years_older_than_min)
+expenses$bmi_greater_than_min <- as.numeric(expenses$bmi_greater_than_min)
 
 # Create the predictor matrix (bmi and children columns) as a numeric matrix
-X <- as.matrix(expenses[, c("bmi", "children")])
+X <- as.matrix(expenses[, c("years_older_than_min", "bmi_greater_than_min")])
 
 # Response vector (smoker column)
-y <- expenses$smoker
+y <- expenses$charges_above_median
 
 # Apply the estimate_beta function to estimate the beta coefficients
 model <- estimate_beta(X, y)
