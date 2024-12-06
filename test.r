@@ -1,6 +1,6 @@
 #Load the package
-#library(devtools)
-#install_github("AU-R-Programming/FinalProject13")
+library(devtools)
+install_github("AU-R-Programming/FinalProject13")
 
 # Load the necessary functions from your package
 library(FinalProject13)

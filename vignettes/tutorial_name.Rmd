@@ -15,7 +15,13 @@ knitr::opts_chunk$set(
 )
 ```
 
+## Installation
+
+Our package can be installed from our public github repository using the function `install_github` from the package `devtools`.
+
 ```{r setup}
+library(devtools)
+install_github("AU-R-Programming/FinalProject13")
 library(FinalProject13)
 ```
 
