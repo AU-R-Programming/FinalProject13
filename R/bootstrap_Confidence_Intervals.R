@@ -23,18 +23,7 @@ bootstrap_ci <- function(X, y, num_bootstraps = 20, alpha = 0.05) {
     indices <- sample(seq_len(n), size = n, replace = TRUE)
     X_boot <- X[indices, ]
     y_boot <- y[indices]
-    
-    # Check if the bootstrapped sample has variation in y
-    if (length(unique(y_boot)) == 1) {
-      beta_boot[i, ] <- rep(NA, ncol(X))  # Skip if y_boot has only one class
-    } else {
-      # Add error handling for failed estimates
-      tryCatch({
-        beta_boot[i, ] <- estimate_beta(X_boot, y_boot)$coefficients
-      }, error = function(e) {
-        beta_boot[i, ] <- rep(NA, ncol(X))  # Assign NA if the estimation fails
-      })
-    }
+    beta_boot[i, ] <- estimate_beta(X_boot, y_boot)$coefficients
   }
   
   # Compute percentile confidence intervals
