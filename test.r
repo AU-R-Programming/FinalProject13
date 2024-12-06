@@ -63,7 +63,7 @@ X <- as.matrix(expenses[, c("years_older_than_min", "bmi_greater_than_min")])
 y <- expenses$charges_above_median
 
 # Perform bootstrap to calculate confidence intervals for the beta coefficients
-bootstrap_result <- bootstrap_ci(X, y, num_bootstraps = 1000, alpha = 0.05)
+bootstrap_result <- bootstrap_ci(X, y, alpha = 0.05, num_bootstrap = 20)
 
 # Display the confidence intervals
 print(bootstrap_result)
@@ -72,3 +72,4 @@ print(bootstrap_result)
 
 #references
 #https://chatgpt.com/share/6751295b-685c-8010-9fc9-176f596d9850
+#https://chatgpt.com/share/675277dc-b844-800a-ab65-b7aa75818653

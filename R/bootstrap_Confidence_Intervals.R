@@ -55,3 +55,6 @@ bootstrap_ci <- function(X, y, alpha = 0.05, num_bootstrap = 20) {
     upper_bound = upper_bound
   )
 }
+
+#Resources
+#https://chatgpt.com/share/675277ad-e7ac-800a-a8d2-0ff547dc9b54
