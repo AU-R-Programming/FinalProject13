@@ -45,21 +45,21 @@ We will begin by loading the **expenses.csv** file. This dataset includes multip
 
 ```{r}
 # Load the dataset from the 'inst/extdata' directory in the package
-expenses <- read.csv(system.file("extdata", "expenses.csv", package = "FinalProjectGroup13"))
-head(expenses)
+bank <- read.csv(system.file("extdata", "bank.csv", package = "FinalProject13"))
+head(bank)
 
 # Step 2: Converting Categorical Data to Binary
 # Convert 'smoker' column to binary (1 for yes, 0 for no)
-expenses$smoker <- ifelse(expenses$smoker == "yes", 1, 0)
+bank$housing <- ifelse(bank$housing == "yes", 1, 0)
 
 # Step 3: Inspecting the Data
 # Inspect the 'bmi' and 'children' columns for any issues
-summary(expenses$bmi)
-summary(expenses$children)
+summary(bank$age)
+summary(bank$balance)
 
 # Step 4: Data Summary
 # Summary of the processed data
-summary(expenses)
+summary(bank)
 ```
 
 ## Applying Package Functions to the Data
